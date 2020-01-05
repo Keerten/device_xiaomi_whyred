@@ -1,4 +1,4 @@
-# 
+#
 # Copyright (C) 2018 The Mokee Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,16 +28,14 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
-# Inherit some common Derp stuff.
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+# Inherit some common Pixel stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Gapps
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
-IS_PHONE := true
-TARGET_MINIMAL_APPS := false
 
-PRODUCT_NAME := derp_whyred
+PRODUCT_NAME := aosp_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
@@ -56,6 +54,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=xiaomi/whyred/whyred:8.1.0/OPM1.171019.011/V9.5.11.0.OEIMIFA:user/release-keys
 
 TARGET_VENDOR := Xiaomi
-
-# Official
-DERP_BUILDTYPE := Official
